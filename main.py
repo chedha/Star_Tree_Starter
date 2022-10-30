@@ -60,27 +60,10 @@ class Tree():
         self.node_list= []
         self.root = None
 
-    """
-    Zybook section 5.10
-    BSTInsertRecursive(parent, nodeToInsert) {
-       if (nodeToInsert⇢key < parent⇢key) {
-          if (parent⇢left is null)
-             parent⇢left = nodeToInsert
-          else
-             BSTInsertRecursive(parent⇢left, nodeToInsert)
-       }
-       else {
-          if (parent⇢right is null)
-             parent⇢right = nodeToInsert
-          else
-             BSTInsertRecursive(parent⇢right, nodeToInsert)
-       }
-    }
-    """
+   
     # Non-recursive wrapper to deal with adding first node in tree (becomes root)
 
-    #
-    # Your code for insert here...
+   
     # Add the star object to a new TreeNode, using the 
     # star_info member of the TreeNode to hold the star
     # object and using the display_name member of star as
@@ -116,24 +99,10 @@ class Tree():
       return isStored
 
 
-    """
-    Zybook section 5.7
-    BSTPrintInorder(node) {
-   if (node is null)
-      return                     // "Ret"
-
-   BSTPrintInorder(node⇢left)   // "L"  
-   Print node                    // "Cur"
-   BSTPrintInorder(node⇢right)  // "R"
-    }
-    """
-    
+      
     #
     # Your code to print the nodes in the tree here
-    #
-    # Star has a print_me() method that will dump some attributes
-    # for you when called.
-    #
+    
     
     def preorder_print( self, root ):
 
@@ -144,32 +113,8 @@ class Tree():
       print(root.key)
       self.preorder_print(root.right)
 
-    """
-    ZyBook 5.12.2
-    def search(self, desired_key):
-        current_node = self.root
-        while current_node is not None:
-            # Return the node if the key matches.
-            if current_node.key == desired_key:
-                return current_node
-                
-            # Navigate to the left if the search key is
-            # less than the node's key.
-            elif desired_key < current_node.key:
-                current_node = current_node.left
-                
-            # Navigate to the right if the search key is
-            # greater than the node's key.
-            else:
-                current_node = current_node.right
-      
-        # The key was not found in the tree.
-        return None
-    """
+   
 
-    #
-    # Your code to search the tree here
-    #
     # Search for a node in the Tree whose key matches the
     # key ardument here
     def search( self, key):
@@ -281,7 +226,7 @@ def main():
     #
     
     # test search Procyon
-    node_found = star_tree.search( "Procyon")
+    node_found = star_tree.search( "Sirius")
     if node_found is None:
         print( "Not found")
     else:
